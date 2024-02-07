@@ -20,13 +20,16 @@ export class Juego {
 
         this._actualizar = function(){};
         this._dibujar = function(){};
-        this.iniciarBucle();
-
+        
         this._escenas = [];
         this._actualEscena = this.adjuntarEscena(EscenaSilabas);
-        this._cambiarEscena(this._escenas[this._actualEscena]);
+        // console.log(this.actualEscena);
 
-
+        this._cambiarEscena(this.actualEscena);
+        this.actualEscena.iniciar();
+        
+        
+        this.iniciarBucle();
     }
     contenedorPapa: HTMLElement;
     
@@ -44,7 +47,7 @@ export class Juego {
     adjuntarEscena(NuevaEscena: typeof Escena): number {
         let nueva = new NuevaEscena(this);
         nueva.cargar();
-        let indice = this._escenas.push(nueva);
+        let indice = this._escenas.push(nueva) - 1;
         return indice;
     }
 
@@ -53,8 +56,8 @@ export class Juego {
      * @param escena nueva escena
      */
     private _cambiarEscena(escena: Escena) {
-        this._actualizar = escena.actualizar;
-        this._dibujar = escena.dibujar;
+        this._actualizar = (delta) => escena.actualizar(delta);
+        this._dibujar = (delta) => escena.dibujar(delta);
     }
 
     /**
@@ -66,8 +69,8 @@ export class Juego {
         let vieja = this.actualEscena;
         let nueva = this._escenas[indice];
         vieja.acabar();
-        nueva.iniciar();
         this._cambiarEscena(nueva);
+        nueva.iniciar();
         this.iniciarBucle();
     }
 
@@ -76,7 +79,10 @@ export class Juego {
     }
 
     iniciarBucle() {
-        BuclePrincipal.iniciar(this._actualizar, this._dibujar)
+        BuclePrincipal.iniciar(
+            (delta) => this._actualizar(delta),
+            (delta) => this._dibujar(delta)
+        );
     }
 
 

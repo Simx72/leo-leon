@@ -3,6 +3,7 @@
  */
 namespace BuclePrincipal {
     let idEjecucion: number | null = null;
+    let ultimoSegundo = 0;
     let ultimoRegistro = 0;
     let aps = 0;
     let fps = 0;
@@ -13,6 +14,7 @@ namespace BuclePrincipal {
     export function iniciar(actualizar: (delta:number) => void, dibujar: (delta:number) => void) {
         actualizarJuego = actualizar;
         dibujarJuego = dibujar;
+        console.log('[bucle] Iniciando con ', actualizarJuego, dibujarJuego);
         iterar();
     }
 
@@ -29,8 +31,8 @@ namespace BuclePrincipal {
 
         // este if se cumple cada vez que pasa un segundo o mas
         // if (tiempo >= 1s):
-        if (registroTemporal - ultimoRegistro > 999) {
-            ultimoRegistro = registroTemporal; // asi el registro temporal avanza y el ultimo registro va por detras
+        if (registroTemporal - ultimoSegundo > 999) {
+            ultimoSegundo = registroTemporal; // asi el registro temporal avanza y el ultimo registro va por detras
             console.log(`APS: ${aps}\t| FPS: ${fps}`);
             lastFPS = fps;
             lastAPS = aps;
@@ -41,6 +43,7 @@ namespace BuclePrincipal {
     }
 
     export function detener(){
+        console.log('[bucle] Deteniendo')
         if (idEjecucion) {
             window.cancelAnimationFrame(idEjecucion);
         }
@@ -51,6 +54,7 @@ namespace BuclePrincipal {
     function _actualizar(registroTemporal:  number) {
         aps++; // cada vez que actualiza, suma uno a los aps
         delta = registroTemporal - ultimoRegistro;
+        ultimoRegistro = registroTemporal;
         actualizarJuego(delta);
     }
 
