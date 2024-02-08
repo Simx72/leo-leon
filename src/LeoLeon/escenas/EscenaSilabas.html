@@ -36,47 +36,29 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
+        user-select: none;
     }
 
-    .col-l .bloque {
+    .bloque.vocal {
         background-color: var(--color-vocal);
     }
     
-    .col-r .bloque {
+    .bloque.conso {
         background-color: var(--color-conso);
+    }
+
+    .bloque.flotante {
+        position: absolute;
+        cursor: grab;
     }
 
 
 </style>
 <div class="row">
     <div class="col-l">
-        <div class="bloque">a</div>
-        <div class="bloque">e</div>
-        <div class="bloque">i</div>
-        <div class="bloque">o</div>
-        <div class="bloque">u</div>
     </div>
     <div class="col-c"></div>
     <div class="col-r">
-        <div class="bloque">1</div>
-        <div class="bloque">2</div>
-        <div class="bloque">3</div>
-        <div class="bloque">4</div>
-        <div class="bloque">5</div>
-        <div class="bloque">6</div>
-        <div class="bloque">7</div>
-        <div class="bloque">8</div>
-        <div class="bloque">9</div>
-        <div class="bloque">10</div>
-        <div class="bloque">11</div>
-        <div class="bloque">12</div>
-        <div class="bloque">13</div>
-        <div class="bloque">14</div>
-        <div class="bloque">15</div>
-        <div class="bloque">16</div>
-        <div class="bloque">17</div>
-        <div class="bloque">18</div>
-        <div class="bloque">19</div>
-        <div class="bloque">20</div>
     </div>
 </div>

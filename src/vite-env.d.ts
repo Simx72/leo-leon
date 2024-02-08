@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 
-module "*.html?raw" {
+module "*.html?url" {
     const value: string;
     export default value;
 }

@@ -18,9 +18,9 @@ export class Escena {
      * @param path the path of the file
      * @param meta 
      */
-    async cargarHtml(path: string) {
-        let value = await import(/* @vite-ignore */path + "?raw") as {default: string};
-        this.html = value.default;
+    async cargarHtml(url: string): Promise<void> {
+        let res = await this.solicitarRecurso<string>(url);
+        this.html = res;
     }
     async cargar() {
         await this.cargarHtml('./Escena.html');
@@ -36,4 +36,27 @@ export class Escena {
     actualizar(delta: number) {delta;};
     dibujar(delta: number) {delta;};
     acabar() {};
+    solicitarRecurso<T>(url: string) {
+        return new Promise<T>(function (resolve, reject) {
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', url);
+            xhr.onload = function () {
+                if (this.status >= 200 && this.status < 300) {
+                    resolve(xhr.response);
+                } else {
+                    reject({
+                        status: this.status,
+                        statusText: xhr.statusText
+                    });
+                }
+            };
+            xhr.onerror = function () {
+                reject({
+                    status: this.status,
+                    statusText: xhr.statusText
+                });
+            };
+            xhr.send();
+        });
+    }
 }

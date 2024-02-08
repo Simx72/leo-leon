@@ -1,0 +1,191 @@
+[
+  {
+    "LETRA": "A",
+    "MINUSCULA": "a",
+    "MAYUSCULA": "A",
+    "VOCAL": true,
+    "NOMBRE": "a"
+  },
+  {
+    "LETRA": "B",
+    "MINUSCULA": "b",
+    "MAYUSCULA": "B",
+    "VOCAL": false,
+    "NOMBRE": "be"
+  },
+  {
+    "LETRA": "C",
+    "MINUSCULA": "c",
+    "MAYUSCULA": "C",
+    "VOCAL": false,
+    "NOMBRE": "ce"
+  },
+  {
+    "LETRA": "D",
+    "MINUSCULA": "d",
+    "MAYUSCULA": "D",
+    "VOCAL": false,
+    "NOMBRE": "de"
+  },
+  {
+    "LETRA": "E",
+    "MINUSCULA": "e",
+    "MAYUSCULA": "E",
+    "VOCAL": true,
+    "NOMBRE": "e"
+  },
+  {
+    "LETRA": "F",
+    "MINUSCULA": "f",
+    "MAYUSCULA": "F",
+    "VOCAL": false,
+    "NOMBRE": "efe"
+  },
+  {
+    "LETRA": "G",
+    "MINUSCULA": "g",
+    "MAYUSCULA": "G",
+    "VOCAL": false,
+    "NOMBRE": "ge"
+  },
+  {
+    "LETRA": "H",
+    "MINUSCULA": "h",
+    "MAYUSCULA": "H",
+    "VOCAL": false,
+    "NOMBRE": "ache"
+  },
+  {
+    "LETRA": "I",
+    "MINUSCULA": "i",
+    "MAYUSCULA": "I",
+    "VOCAL": true,
+    "NOMBRE": "i"
+  },
+  {
+    "LETRA": "J",
+    "MINUSCULA": "j",
+    "MAYUSCULA": "J",
+    "VOCAL": false,
+    "NOMBRE": "jota"
+  },
+  {
+    "LETRA": "K",
+    "MINUSCULA": "k",
+    "MAYUSCULA": "K",
+    "VOCAL": false,
+    "NOMBRE": "ka"
+  },
+  {
+    "LETRA": "L",
+    "MINUSCULA": "l",
+    "MAYUSCULA": "L",
+    "VOCAL": false,
+    "NOMBRE": "ele"
+  },
+  {
+    "LETRA": "M",
+    "MINUSCULA": "m",
+    "MAYUSCULA": "M",
+    "VOCAL": false,
+    "NOMBRE": "eme"
+  },
+  {
+    "LETRA": "N",
+    "MINUSCULA": "n",
+    "MAYUSCULA": "N",
+    "VOCAL": false,
+    "NOMBRE": "ene"
+  },
+  {
+    "LETRA": "Ñ",
+    "MINUSCULA": "ñ",
+    "MAYUSCULA": "Ñ",
+    "VOCAL": false,
+    "NOMBRE": "eñe"
+  },
+  {
+    "LETRA": "O",
+    "MINUSCULA": "o",
+    "MAYUSCULA": "O",
+    "VOCAL": true,
+    "NOMBRE": "o"
+  },
+  {
+    "LETRA": "P",
+    "MINUSCULA": "p",
+    "MAYUSCULA": "P",
+    "VOCAL": false,
+    "NOMBRE": "pe"
+  },
+  {
+    "LETRA": "Q",
+    "MINUSCULA": "q",
+    "MAYUSCULA": "Q",
+    "VOCAL": false,
+    "NOMBRE": "cu"
+  },
+  {
+    "LETRA": "R",
+    "MINUSCULA": "r",
+    "MAYUSCULA": "R",
+    "VOCAL": false,
+    "NOMBRE": "erre"
+  },
+  {
+    "LETRA": "S",
+    "MINUSCULA": "s",
+    "MAYUSCULA": "S",
+    "VOCAL": false,
+    "NOMBRE": "ese"
+  },
+  {
+    "LETRA": "T",
+    "MINUSCULA": "t",
+    "MAYUSCULA": "T",
+    "VOCAL": false,
+    "NOMBRE": "te"
+  },
+  {
+    "LETRA": "U",
+    "MINUSCULA": "u",
+    "MAYUSCULA": "U",
+    "VOCAL": true,
+    "NOMBRE": "u"
+  },
+  {
+    "LETRA": "V",
+    "MINUSCULA": "v",
+    "MAYUSCULA": "V",
+    "VOCAL": false,
+    "NOMBRE": "uve"
+  },
+  {
+    "LETRA": "W",
+    "MINUSCULA": "w",
+    "MAYUSCULA": "W",
+    "VOCAL": false,
+    "NOMBRE": "doble u"
+  },
+  {
+    "LETRA": "X",
+    "MINUSCULA": "x",
+    "MAYUSCULA": "X",
+    "VOCAL": false,
+    "NOMBRE": "equis"
+  },
+  {
+    "LETRA": "Y",
+    "MINUSCULA": "y",
+    "MAYUSCULA": "Y",
+    "VOCAL": false,
+    "NOMBRE": "ye"
+  },
+  {
+    "LETRA": "Z",
+    "MINUSCULA": "z",
+    "MAYUSCULA": "Z",
+    "VOCAL": false,
+    "NOMBRE": "zeta"
+  }
+]
