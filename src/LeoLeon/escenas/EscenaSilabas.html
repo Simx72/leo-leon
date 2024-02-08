@@ -36,7 +36,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        cursor: pointer;
+        cursor: grab;
         user-select: none;
     }
 
@@ -51,6 +51,23 @@
     .bloque.flotante {
         position: absolute;
         cursor: grab;
+    }
+
+    .bloque.flotante[data-agarra="true"] {
+        cursor: grabbing;
+    }
+
+    .boton-eliminar {
+        position: absolute;
+        top: -13px;
+        left: -13px;
+        border: 3px solid white;
+        color: white;
+        background-color: #ea2424;
+        width: 25px;
+        height: 25px;
+        aspect-ratio: 1;
+        border-radius: 20px;
     }
 
 
