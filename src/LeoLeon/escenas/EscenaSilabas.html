@@ -1,3 +1,82 @@
-<div>
-    <h1>Escena Silabas</h1>
+<style>
+    :root {
+        --color-vocal: #FF8F00;
+        --color-conso: #01579B;
+    }
+
+    .row {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    .col-l, .col-r {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        width: 100px;
+        background-color: #CE93D8;
+    }
+
+    .col-c {
+        width: 100%;
+    }
+
+    .bloque {
+        aspect-ratio: 1;
+        min-width: 60px;
+        margin: .4rem auto;
+        background-color: white;
+        border: 3px solid white;
+        font-size: 28pt;
+        color: white;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .col-l .bloque {
+        background-color: var(--color-vocal);
+    }
+    
+    .col-r .bloque {
+        background-color: var(--color-conso);
+    }
+
+
+</style>
+<div class="row">
+    <div class="col-l">
+        <div class="bloque">a</div>
+        <div class="bloque">e</div>
+        <div class="bloque">i</div>
+        <div class="bloque">o</div>
+        <div class="bloque">u</div>
+    </div>
+    <div class="col-c"></div>
+    <div class="col-r">
+        <div class="bloque">1</div>
+        <div class="bloque">2</div>
+        <div class="bloque">3</div>
+        <div class="bloque">4</div>
+        <div class="bloque">5</div>
+        <div class="bloque">6</div>
+        <div class="bloque">7</div>
+        <div class="bloque">8</div>
+        <div class="bloque">9</div>
+        <div class="bloque">10</div>
+        <div class="bloque">11</div>
+        <div class="bloque">12</div>
+        <div class="bloque">13</div>
+        <div class="bloque">14</div>
+        <div class="bloque">15</div>
+        <div class="bloque">16</div>
+        <div class="bloque">17</div>
+        <div class="bloque">18</div>
+        <div class="bloque">19</div>
+        <div class="bloque">20</div>
+    </div>
 </div>

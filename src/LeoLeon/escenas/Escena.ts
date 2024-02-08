@@ -1,4 +1,5 @@
 import { Juego } from "../Juego";
+import plantilla from './plantilla.html?raw';
 
 /**
  * Escena del juego
@@ -10,18 +11,28 @@ export class Escena {
     }
     juego: Juego;
     html: string | null = null;
+    titulo = "";
 
     /**
      * 
      * @param path the path of the file
      * @param meta 
      */
-    cargarHtml(path: string, meta: string) {
-        let url = new URL(path, meta).href
-        console.log(url);
+    async cargarHtml(path: string) {
+        let value = await import(/* @vite-ignore */path + "?raw") as {default: string};
+        this.html = value.default;
     }
-    cargar() {};
-    iniciar() {};
+    async cargar() {
+        await this.cargarHtml('./Escena.html');
+    };
+    iniciar() {
+        if (this.html) {
+            this.juego.contenedorPapa.innerHTML = plantilla
+                .replace('[titulo]', this.titulo)
+                .replace('[cuerpo]', this.html)
+                .replace('[footer]', ''/* T*T */)
+        }
+    };
     actualizar(delta: number) {delta;};
     dibujar(delta: number) {delta;};
     acabar() {};

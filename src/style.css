@@ -1,15 +1,56 @@
+:root {
+	--color-primary: #6903f2;
+	--color-complem: #8bf203;
+	--color-analog1: #0313f2;
+	--color-analog2: #e203f2;
+	--color-triadi1: #f2038b;
+	--color-triadi2: #f26b03;
+	--color-bg: #64B5F6;
+}
+
+
 * {
 	box-sizing: border-box;
 }
 
-html, body, #app {
+html {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html, body, #juego {
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
 }
 
-#app {
-	border: 1px solid black;
-	background-color: aqua;
+#juego {
+	background-color: var(--color-bg);
+	display: block;
+}
+
+header {
+	background-color: var(--color-primary);
+	height: 50px;
+	display: flex;
+}
+
+header h1 {
+	margin: auto;
+	display: block;
+	color: white;
+	text-shadow: 3px 4px 8px #00000090;
+	font-weight: 500;
+}
+
+#cuerpo {
+	margin: 0;
+	height: calc(100vh - 100px);
+	overflow: auto;
+}
+
+footer {
+	height: 50px;
+	background-color: var(--color-complem);
+	margin: 0;
 }

@@ -22,14 +22,15 @@ export class Juego {
         this._dibujar = function(){};
         
         this._escenas = [];
-        this._actualEscena = this.adjuntarEscena(EscenaSilabas);
-        // console.log(this.actualEscena);
-
-        this._cambiarEscena(this.actualEscena);
-        this.actualEscena.iniciar();
-        
-        
-        this.iniciarBucle();
+        this._actualEscena = 0;
+        this.adjuntarEscena(EscenaSilabas).then((indice) => {
+            this._actualEscena = indice;    
+            this._cambiarEscena(this.actualEscena);
+            this.actualEscena.iniciar();
+            
+            
+            this.iniciarBucle();
+        });
     }
     contenedorPapa: HTMLElement;
     
@@ -44,9 +45,9 @@ export class Juego {
      * Adjunta una escena al arreglo y devuelve el indice de esta
      * @param NuevaEscena la clase de la nueva escena (no una instancia!)
      */
-    adjuntarEscena(NuevaEscena: typeof Escena): number {
+    async adjuntarEscena(NuevaEscena: typeof Escena): Promise<number> {
         let nueva = new NuevaEscena(this);
-        nueva.cargar();
+        await nueva.cargar();
         let indice = this._escenas.push(nueva) - 1;
         return indice;
     }
