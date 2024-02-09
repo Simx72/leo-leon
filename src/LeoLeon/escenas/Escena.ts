@@ -12,6 +12,7 @@ export class Escena {
     juego: Juego;
     html: string | null = null;
     titulo = "";
+    footer = "";
 
     /**
      * 
@@ -30,12 +31,12 @@ export class Escena {
             this.juego.contenedorPapa.innerHTML = plantilla
                 .replace('[titulo]', this.titulo)
                 .replace('[cuerpo]', this.html)
-                .replace('[footer]', ''/* T*T */)
+                .replace('[footer]', this.footer)
         }
     };
-    actualizar(delta: number) {delta;};
-    dibujar(delta: number) {delta;};
-    acabar() {};
+    actualizar(delta: number) {delta;}
+    dibujar(delta: number) {delta;}
+    acabar() {}
     solicitarRecurso<T>(url: string) {
         return new Promise<T>(function (resolve, reject) {
             let xhr = new XMLHttpRequest();
